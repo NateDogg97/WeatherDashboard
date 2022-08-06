@@ -1,0 +1,77 @@
+* {
+    position: relative;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #373737;
+}
+
+.content {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+aside { 
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: 100vh;
+    background-color: rgb(80, 80, 80);
+    padding: 15px; 
+}
+
+aside h5 {
+    color: aliceblue;
+}
+
+#searchBtn{
+    background-color: rgb(223, 138, 211);
+}
+
+main {
+    width: 100%;
+}
+
+#todaysForecast {
+    color:aliceblue;
+    padding: 30px 30px 10px 30px;
+}
+#todaysForecast li {
+    line-height: 2;
+    margin: 20px 0;
+}
+
+#cards {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 15px;
+}
+
+.card {
+    margin-bottom: 12px;
+    border-color: rgb(223, 138, 211);
+    border-width: 3px;
+    box-shadow: 2px 5px rgb(211, 196, 209);
+}
+
+div.card-body {
+    padding: 8px;
+}
+
+.card li {
+    margin: 5px 0;
+}
+
+li::marker {
+    content: "";
+}
+
+@media (min-width: 576px) {
+    .col-sm-3 {
+    flex: 0 0 auto;
+    width: 20%;
+}
+}
