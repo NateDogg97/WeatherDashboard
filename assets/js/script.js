@@ -26,7 +26,7 @@ function btnGO() {
 // the search value
 
 function geocodingAPI(locationName) {
-    var LONGLATurl = 'http://api.openweathermap.org/geo/1.0/direct?q=' + locationName + '&limit=1&appid=7bdaf7d35d6463a5a9236b225cf80e4a';
+    var LONGLATurl = 'https://api.openweathermap.org/geo/1.0/direct?q=' + locationName + '&limit=1&appid=7bdaf7d35d6463a5a9236b225cf80e4a';
 
     const geoData = fetch(LONGLATurl)
 
