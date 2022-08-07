@@ -5,15 +5,18 @@ var todaysTemp = document.querySelector('.todaysTemp');
 var todaysWind = document.querySelector('.todaysWind');
 var todaysHumid = document.querySelector('.todaysHumid');
 var todaysUVIndex = document.querySelector('.todaysUVIndex');
+
 button.addEventListener('click', btnGO);
 
 function btnGO() {
-
-    locationName = String(userInput.value);
+       
+    var locationName = String(userInput.value);
+    locationName = locationName.trim();
+    locationName = locationName.charAt(0).toUpperCase() + locationName.slice(1);
     console.log(locationName);
 
     geocodingAPI(locationName);
-
+    storeHistory(locationName);
 };
 
 function geocodingAPI(locationName) {
@@ -66,7 +69,9 @@ function currentAPI(Lat, Lon) {
 
 function fillBlanks(data) {
 
-    var a = String(userInput.value)
+    var a = String(userInput.value);
+    document.querySelector('#todaysForecast').style = 'visibility: visible';
+    document.querySelector('#cards').style = 'visibility: visible';
 
     todaysWind.textContent = data.current.wind_speed + ' Mph';
     todaysTemp.textContent = Math.round(kelvinToF(data.current.temp)) + ' F';
@@ -147,3 +152,50 @@ function displayImg(icon) {
 
     return img
 }
+
+function storeHistory(input){
+
+    var a = [];
+
+    a = JSON.parse(localStorage.getItem('city')) || [];
+
+    if (a.indexOf(input) !== -1 || a.length > 5 || input == ""){
+        return
+
+    } else {
+        a.push(input);
+    }
+
+    localStorage.setItem('city', JSON.stringify(a));
+
+}
+
+function buildHistoryButtons() {
+
+    var a = [];
+
+    a = JSON.parse(localStorage.getItem('city')) || [];
+
+    for (var i=0; i<a.length; i++){
+
+        var hbutton = document.createElement('button');
+        hbutton.setAttribute('type', 'button');
+        hbutton.setAttribute('class', 'btn btn-secondary');
+        hbutton.setAttribute('name', a[i])
+        hbutton.style = 'margin-top:15px;';
+        document.querySelector('#historyBtns').append(hbutton);
+
+        hbutton.textContent = a[i];
+    }
+
+}
+
+buildHistoryButtons();
+
+const historyButtons = document.querySelector('#historyBtns')
+historyButtons.addEventListener('click', function(e){
+    if (e.target.classList.contains('btn-secondary')){
+        userInput.value = e.target.name;
+        geocodingAPI(e.target.name);
+    }
+})

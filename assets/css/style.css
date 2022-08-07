@@ -30,6 +30,16 @@ aside h5 {
     background-color: rgb(223, 138, 211);
 }
 
+#historyBtns {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+#todaysForecast, #cards {
+    visibility: hidden;
+}
+
 main {
     width: 100%;
 }
