@@ -9,7 +9,7 @@
   <!-- CSS only -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" 
         rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto"
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto"
         rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/style.css">
   <title>Weather Dashboard</title>
@@ -34,11 +34,12 @@
 
   <main>
     <div id="todaysForecast">
-        <h2>Placeholder <span>8/05/22</span></h2>
+      <img id="img" src="">
+        <h2 class="todaysDate">Placeholder 8/06/22</h2>
         <li>Temp: <span class="todaysTemp">95 F</span></li>
         <li>Wind: <span class="todaysWind">8 Mph</span></li>
         <li>Humidity: <span class="todaysHumid">45%</span></li>
-        <li>UV Index: <span class="todaysUVIndex">.64</span></li>
+        <li>UV Index: <div><span class="todaysUVIndex">.64</span></div></li>
     </div>
 
   <section class="row" id="cards">
@@ -48,10 +49,10 @@
       <div class="card-body">
         <h5 class="card-title">Date</h5>
         <p class="card-text">
-          <li class="cardImg">Img</li>
-          <li>Temp: <span class="cardTemp"> 97 F</span></li>
-          <li>Wind: <span class="cardWind"> 12 mph</span></li>
-          <li class="cardHumid">Humidity:</li>
+          <li class="cardImg"><img class="img" src=""></li>
+          <li>Temp: <span class="cardTemp"></span></li>
+          <li>Wind: <span class="cardWind"></span></li>
+          <li>Humidity: <span class="cardHumid"></span></li>
         </p>
       </div>
     </div>
@@ -61,10 +62,10 @@
       <div class="card-body">
         <h5 class="card-title">Date</h5>
         <p class="card-text">
-          <li class="cardImg">Img</li>
-          <li class="cardTemp">Temp:</li>
-          <li class="cardWind">Wind:</li>
-          <li class="cardHumid">Humidity:</li>
+          <li class="cardImg"><img class="img" src=""></li>
+          <li>Temp: <span class="cardTemp"></span></li>
+          <li>Wind: <span class="cardWind"></span></li>
+          <li>Humidity: <span class="cardHumid"></span></li>
         </p>
       </div>
     </div>
@@ -74,10 +75,10 @@
       <div class="card-body">
         <h5 class="card-title">Date</h5>
         <p class="card-text">
-          <li class="cardImg">Img</li>
-          <li class="cardTemp">Temp:</li>
-          <li class="cardWind">Wind:</li>
-          <li class="cardHumid">Humidity:</li>
+          <li class="cardImg"><img class="img" src=""></li>
+          <li>Temp: <span class="cardTemp"></span></li>
+          <li>Wind: <span class="cardWind"></span></li>
+          <li>Humidity: <span class="cardHumid"></span></li>
         </p>
       </div>
     </div>
@@ -87,10 +88,10 @@
       <div class="card-body">
         <h5 class="card-title">Date</h5>
         <p class="card-text">
-          <li class="cardImg">Img</li>
-          <li class="cardTemp">Temp:</li>
-          <li class="cardWind">Wind:</li>
-          <li class="cardHumid">Humidity:</li>
+          <li class="cardImg"><img class="img" src=""></li>
+          <li>Temp: <span class="cardTemp"></span></li>
+          <li>Wind: <span class="cardWind"></span></li>
+          <li>Humidity: <span class="cardHumid"></span></li>
         </p>
       </div>
     </div>
@@ -100,10 +101,10 @@
       <div class="card-body">
         <h5 class="card-title">Date</h5>
         <p class="card-text">
-          <li class="cardImg">Img</li>
-          <li class="cardTemp">Temp:</li>
-          <li class="cardWind">Wind:</li>
-          <li class="cardHumid">Humidity:</li>
+          <li class="cardImg"><img class="img" src=""></li>
+          <li>Temp: <span class="cardTemp"></span></li>
+          <li>Wind: <span class="cardWind"></span></li>
+          <li>Humidity: <span class="cardHumid"></span></li>
         </p>
       </div>
     </div>
@@ -117,6 +118,7 @@
 <script src="https://code.jquery.com/jquery-3.6.0.js" 
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" 
         crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 <script src="./assets/js/script.js"></script>
 
 </html>

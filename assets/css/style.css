@@ -38,9 +38,17 @@ main {
     color:aliceblue;
     padding: 30px 30px 10px 30px;
 }
+
 #todaysForecast li {
     line-height: 2;
     margin: 20px 0;
+}
+
+li div {
+    display: inline-flex;
+    padding: 0 5px;
+    border-radius: 5px;
+    background-color: green;
 }
 
 #cards {
@@ -54,7 +62,7 @@ main {
     margin-bottom: 12px;
     border-color: rgb(223, 138, 211);
     border-width: 3px;
-    box-shadow: 2px 5px rgb(211, 196, 209);
+    box-shadow: 2px 5px 2px rgb(211, 196, 209);
 }
 
 div.card-body {
