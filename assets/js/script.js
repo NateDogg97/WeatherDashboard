@@ -81,7 +81,7 @@ function fillBlanks(data) {
     todaysWind.textContent = data.current.wind_speed + ' Mph';
     todaysTemp.textContent = Math.round(kelvinToF(data.current.temp)) + ' F';
     todaysHumid.textContent = data.current.humidity + ' %';
-    todaysDate.textContent = a.charAt(0).toUpperCase() + a.slice(1) + ' ' + moment(data.current.dt).format('dddd, MMMM Do');
+    todaysDate.textContent = a.charAt(0).toUpperCase() + a.slice(1) + ' ' + moment().format('dddd, MMMM Do');
     $('#img').attr('src', displayImg(data.current.weather.icon));
 
 // This conditional handles the UV Index color    
