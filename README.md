@@ -1,5 +1,5 @@
 # WeatherDashboard
-This is Challenge 06. It is a website that displays the weather for any searchable city up to five days in the future and also stores a brief search history
+Weather Dashboard is a web application that displays the weather for any searchable city up to five days in the future and also stores a brief search history
 
 For this challenge I used a combination of the OneCall API and the Geocoding API to find the location of the user input. I used a fetch request to use the data to dynamically populate the daily forecast up to five days in the future.
 
